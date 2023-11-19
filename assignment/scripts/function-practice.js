@@ -63,16 +63,24 @@ console.log(isPositive(0));   // log zero, expected return to be false
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast(array) {
+function getLast(array)
 
-}
+
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find(value, array) {
 
-}
+let array = [4,5,6]//establish array
+function find(value, array) {//find is a function that checks if value is in array.  
+  for (let i=0; i < array.length; i++) {if (value === array[i]){//starting at the index of zero, check if the number at that array index is 
+    return true;}} return false;// equal to value.  If it is, return true. Increase by one index and repeat. If no numbers equal value return false.
+  };
+
+  console.log(find(7,array));//log with a number outside of array, expect false.
+  console.log(find(4,array));//log with a number inside of the array, expect true.
+
+
 
 // ----------------------
 // Stretch Goals
