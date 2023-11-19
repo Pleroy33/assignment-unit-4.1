@@ -76,7 +76,6 @@ console.log(getLast([]));
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 
 let array = [4,5,6]//establish array
-console.log(array);
 function find(value, array) {//find is a function that checks if value is in array.  
   for (let i=0; i < array.length; i++) {if (value === array[i]){//starting at the index of zero, check if the number at that array index is 
     return true;}} return false;// equal to value.  If it is, return true. Increase by one index and repeat. If no numbers equal value return false.
@@ -92,18 +91,24 @@ function find(value, array) {//find is a function that checks if value is in arr
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
-function isFirstLetter(letter, string) {
+function isFirstLetter(letter, string) {if (letter === string.substring(0,1)){return true}
+else {return false}
 
 }
+console.log(isFirstLetter('p', 'paul'));
+console.log(isFirstLetter('j', 'Killroy'));
 
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll(array) {
   let sum = 0;
+  for (let i=0;i<array.length-1;i++){sum = i+ }
+  }
   // TODO: loop to add items
 
   // TODO: return the sum
-}
+  console.log(sumAll(5,10,15,20))
+  
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
