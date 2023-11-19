@@ -63,7 +63,11 @@ console.log(isPositive(0));   // log zero, expected return to be false
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast(array)
+function getLast(myArray){if (myArray > []){return myArray[myArray.length-1];}//create function to reture the last item in an array. 
+return 'undefined';//Check if the array is empty, if not, return the last item using the .length method to access the last item. If it is, return undefined.
+};
+console.log(getLast([7,8,6,9]));
+console.log(getLast([]));
 
 
 
@@ -72,6 +76,7 @@ function getLast(array)
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 
 let array = [4,5,6]//establish array
+console.log(array);
 function find(value, array) {//find is a function that checks if value is in array.  
   for (let i=0; i < array.length; i++) {if (value === array[i]){//starting at the index of zero, check if the number at that array index is 
     return true;}} return false;// equal to value.  If it is, return true. Increase by one index and repeat. If no numbers equal value return false.
