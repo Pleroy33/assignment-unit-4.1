@@ -43,7 +43,7 @@ console.log(multiplyThree(4, 5, 6)); //console log the function with the nubmers
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive(number) {
-  
+
   if (number > 0) {
     return true;
   } else if (number <= 0) {
@@ -63,10 +63,11 @@ console.log(isPositive(0));   // log zero, expected return to be false
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast(myArray){if (myArray > []){return myArray[myArray.length-1];}//create function to reture the last item in an array. 
-return 'undefined';//Check if the array is empty, if not, return the last item using the .length method to access the last item. If it is, return undefined.
+function getLast(myArray) {
+  if (myArray > []) { return myArray[myArray.length - 1]; }//create function to reture the last item in an array. 
+  return 'undefined';//Check if the array is empty, if not, return the last item using the .length method to access the last item. If it is, return undefined.
 };
-console.log(getLast([7,8,6,9]));
+console.log(getLast([7, 8, 6, 9]));
 console.log(getLast([]));
 
 
@@ -75,14 +76,17 @@ console.log(getLast([]));
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 
-let array = [4,5,6]//establish array
+let array = [4, 5, 6]//establish array
 function find(value, array) {//find is a function that checks if value is in array.  
-  for (let i=0; i < array.length; i++) {if (value === array[i]){//starting at the index of zero, check if the number at that array index is 
-    return true;}} return false;// equal to value.  If it is, return true. Increase by one index and repeat. If no numbers equal value return false.
-  };
+  for (let i = 0; i < array.length; i++) {
+    if (value === array[i]) {//starting at the index of zero, check if the number at that array index is 
+      return true;
+    }
+  } return false;// equal to value.  If it is, return true. Increase by one index and repeat. If no numbers equal value return false.
+};
 
-  console.log(find(7,array));//log with a number outside of array, expect false.
-  console.log(find(4,array));//log with a number inside of the array, expect true.
+console.log(find(7, array));//log with a number outside of array, expect false.
+console.log(find(4, array));//log with a number inside of the array, expect true.
 
 
 
@@ -91,8 +95,9 @@ function find(value, array) {//find is a function that checks if value is in arr
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
-function isFirstLetter(letter, string) {if (letter === string.substring(0,1)){return true}
-else {return false}
+function isFirstLetter(letter, string) {
+  if (letter === string.substring(0, 1)) { return true }
+  else { return false };
 
 }
 console.log(isFirstLetter('p', 'paul'));
@@ -100,15 +105,24 @@ console.log(isFirstLetter('j', 'Killroy'));
 
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll(array) {
-  let sum = 0;
-  for (let i=0;i<array.length-1;i++){sum = i+ }
-  }
-  // TODO: loop to add items
-
-  // TODO: return the sum
-  console.log(sumAll(5,10,15,20))
+function sumAll(array) {   //function sumAll that uses parameters array
+  let sum = 0;              //establish sum and set it to the number 0
+  for (let i = 0; i < array.length; i++) {//starting at the index of zero, consider each element until you hit the index number before array length
+    sum +=array[i];                        //sum is equal to the element at the index + the previous sum.  
+  };
+  return sum;        //return sum, after the loop completes
   
+}
+
+console.log(sumAll([5, 10, 15, 20]))//test the code, expected output in the console is 50
+// TODO: loop to add items
+
+
+// TODO: return the sum
+
+
+
+
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
