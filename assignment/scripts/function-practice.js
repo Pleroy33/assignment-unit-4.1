@@ -108,10 +108,10 @@ console.log(isFirstLetter('j', 'Killroy'));
 function sumAll(array) {   //function sumAll that uses parameters array
   let sum = 0;              //establish sum and set it to the number 0
   for (let i = 0; i < array.length; i++) {//starting at the index of zero, consider each element until you hit the index number before array length
-    sum +=array[i];                        //sum is equal to the element at the index + the previous sum.  
+    sum += array[i];                        //sum is equal to the element at the index + the previous sum.  
   };
   return sum;        //return sum, after the loop completes
-  
+
 }
 
 console.log(sumAll([5, 10, 15, 20]))//test the code, expected output in the console is 50
@@ -127,9 +127,24 @@ console.log(sumAll([5, 10, 15, 20]))//test the code, expected output in the cons
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-function allPositive() {
+
+function allPositive(originalArray) { //create function called allPositive with parameter originalArray
+  console.log('allPositive running');//logged allPositive to see that its working
+  let clonedArray = [];//created clonedArray and set it to empty. 
+  console.log(originalArray);//logged the originalArray to see begining inputs
+  console.log(clonedArray);//logged the clonedArray to verify its empty
+  for (i = 0; i < originalArray.length; i++) {//for loop, starting at index 0 of originalArray, increasing by one index, until index equals length of orignalArray
+    if (originalArray[i] > 0) { clonedArray.push(originalArray[i]); }//if the element of the originalArray is greater than 0, clone it to cloneArray 
+    ; console.log('This is the positives only ', clonedArray);//log the clonedArray with positive nubmers only, 
+    console.log('This is the input array ', originalArray);//log the input array with all numbers
+  }
+  return clonedArray;//the output of the function
+
+
 
 }
+console.log(allPositive([2, 3, -4, -5, 0]));//console logged a mix of positive, negative and zero numbers.
+
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
